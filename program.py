@@ -7,7 +7,7 @@ class Contact:
 
         print(f"Создан новый контакт {name}")
     
-    def  show(phonebook):
+    def show(phonebook):
         print(f"{phonebook.name} - адресс: {phonebook.address}, телефон: {phonebook.phone}, день рождения: {phonebook.birthday}")
 
     def __str__(phonebook):
@@ -17,3 +17,5 @@ mike = Contact("Михаил Булгаков","2-03-27","Россия, Моск
 vlad = Contact("Владимир Маяковский","73-88","Россия, Москва, Лубянский проезд, д. 3, кв. 12","19.07.1893")
 
 print(vlad)
+
+

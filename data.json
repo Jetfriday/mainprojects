@@ -1,0 +1,19 @@
+{
+    "Todo_List": [
+        {
+            "Task": "Ride2",
+            "Planned_Date": "20-05-2022",
+            "Done_Date": "2022-05-20"
+        },
+        {
+            "Task": "Drink",
+            "Planned_Date": "pythonist.ru",
+            "Done_Date": "Michigan"
+        },
+        {
+            "Task": "Smoke",
+            "Planned_Date": "pythonist.ru",
+            "Done_Date": "Alabama"
+        }
+    ]
+}

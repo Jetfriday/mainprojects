@@ -7,7 +7,7 @@ class Contact:
 
         print(f"Создан новый контакт {name}")
     
-    def  show(phonebook):
+    def show(phonebook):
         print(f"{phonebook.name} - адресс: {phonebook.address}, телефон: {phonebook.phone}, день рождения: {phonebook.birthday}")
 
     def __str__(phonebook):

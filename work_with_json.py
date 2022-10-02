@@ -1,33 +1,37 @@
 import json
+from pprint import pprint
+from random import randint as rd, choice as ch
 
-data = {}
-data['Todo_List'] = []
-data['Todo_List'].append({
-    'Task': 'Ride',
-    'Planned_Date': '20-05-2022',
-    'Done_Date': '2022-05-20'
-})
-data['Todo_List'].append({
-    'Task': 'Drink',
-    'Planned_Date': 'pythonist.ru',
-    'Done_Date': 'Michigan'
-})
-data['Todo_List'].append({
-    'Task': 'Smoke',
-    'Planned_Date': 'pythonist.ru',
-    'Done_Date': 'Alabama'
-})
-with open('data.json', 'w', encoding = 'utf-8') as outfile:
-    json.dump(data, outfile, indent = 4)
 
-# def write(data, filename):
-#     data = json.dumps(data)
-#     data = json.loads(str(data))
-#     with open(filename, 'w', encoding = 'utf-8') as file:
-#         json.dump(data, file, indent = 4)
+def write(data, json_file):
+    data = json.dumps(data)
+    data = json.loads(str(data))
+    with open(json_file, 'w', encoding = 'utf-8') as file:
+        json.dump(data, file, indent = 4)
 
-# n_data = {
-#     "users" : [1, 2, 3, 4]
-# }
+def read(json_file):
+    with open(json_file, 'r', encoding = 'utf-8') as file:
+        return json.load(file)
 
-# write(n_data, 'data.json')
+class Task:
+    def __init__(self):
+        self.task = ch(['First', 'Second', 'Third'])
+        self.planned_date = rd(0, 70)
+        self.done_date = rd(0, 1000)
+
+        print(f"Дело записано в лист: {self}")
+
+#Ride = Task('Ride','Today', 'Taday2')
+
+data = {
+    'tasks' : []
+}
+
+for i in range(100):
+    data['tasks'].append(Task().__dict__)
+
+write(data, 'data.json')
+
+# n_data = read('data.json')
+# print(n_data['tasks'][0][1])
+# input()
